@@ -4,6 +4,4 @@ install:
 script:
   - cd scripts/GUID_CORE
   - python -m pytest test/
-  - flake8 *.py
-  - cd /test
-  - flake8 *.py
+  - flake8 --max-complexity 12 .
