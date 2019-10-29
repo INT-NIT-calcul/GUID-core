@@ -1,8 +1,9 @@
 language: python
 install:
   - pip install -r requirements.txt
-  - pip install flake8
 script:
   - cd scripts/GUID_CORE
   - python -m pytest test/
+  - flake8 *.py
+  - cd /test
   - flake8 *.py
