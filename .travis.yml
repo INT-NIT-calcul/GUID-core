@@ -18,12 +18,7 @@ jobs:
         - pip3 install -U pip
         - pip3 install -U pytest
         - pip3 install codecov
-      script:
-      if [[ "$OSTYPE" =~ ^msys ]]; then
-      py -3 $*
-      else
-       python3
-      fi
+     
         
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
 install: 
@@ -34,5 +29,5 @@ install:
 
 script:
   - cd scripts/GUID_CORE
-  - python3 -m pytest test/
+  - python -m pytest test/
   - flake8 --max-complexity 12 .
