@@ -28,6 +28,6 @@ install:
   
 script:
         - cd scripts/GUID_CORE
-        - python3 -m pytest test/
+        - python3 -m pytest test/ || python -m pytest test/
         - flake8 --max-complexity 12 .
 
