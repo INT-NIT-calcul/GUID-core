@@ -3,12 +3,11 @@ import sys
 from generate_GUID import generate_GUID
 import pandas as pd
 
-
 if len(sys.argv) > 1:
 
     if len(sys.argv) == 2:
         file = sys.argv[1]
-        df = pd.read_csv(file, usecols = ["subject_name", "Study_ID"])
+        df = pd.read_csv(file, usecols=["subject_name", "Study_ID"])
         print(df)
 
         for index, row in df.iterrows():
