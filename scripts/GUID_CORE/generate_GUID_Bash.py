@@ -2,8 +2,6 @@
 import sys
 from generate_GUID import generate_GUID
 
-import hashlib
-
 
 if len(sys.argv) > 1:
 
