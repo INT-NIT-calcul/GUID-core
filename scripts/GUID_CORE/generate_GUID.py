@@ -11,5 +11,3 @@ def generate_GUID(keyInput):
     keygood = text_to_id(key)
     GUID = hashlib.sha256(keygood.encode('utf-8')).hexdigest()
     return GUID
-
-
