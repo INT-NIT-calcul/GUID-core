@@ -1,9 +1,6 @@
 #!/usr/bin/python
 import sys
-from strip_accents import text_to_id
 from generate_GUID import generate_GUID
-import hashlib
-
 
 
 if len(sys.argv) > 1:
