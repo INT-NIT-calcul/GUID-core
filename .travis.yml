@@ -31,3 +31,10 @@ script:
         - python3 -m pytest test/ || python -m pytest test/
         - flake8 --max-complexity 12 .
 
+notifications:
+  email:
+    recipients:
+      - jeremygarcia937@gmail.com # a ajouter davic et dipankar
+    on_success: never # default: change
+    on_failure: never # default: always
+
