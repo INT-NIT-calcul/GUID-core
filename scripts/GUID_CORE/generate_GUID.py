@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-import sys
 from strip_accents import text_to_id
 import hashlib
 
