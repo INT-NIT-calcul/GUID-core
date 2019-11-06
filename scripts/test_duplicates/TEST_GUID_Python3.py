@@ -46,14 +46,14 @@ def text_to_id(text):
     :returns: The processed String.
     :rtype: String.
     """
-    text = strip_accents(text.lower())
+    text = strip_accents(text)
     text = re.sub('[ ]+', '_', text)
     text = re.sub('[^0-9a-zA-Z_-]', '', text)
     text = re.sub('-', '', text)
     text = re.sub('_', '', text)
     text = text.replace('\/', '')
     text = text.replace('\\', '')
-    return text
+    return text.upper()
 
 container_final={}
 C1=[]
