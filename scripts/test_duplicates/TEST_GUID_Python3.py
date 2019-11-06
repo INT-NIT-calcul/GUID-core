@@ -64,7 +64,7 @@ C5=[]
 C6=[]
 # reads the csv file in tsv format and stores each columns in a separate list
 infile="./name.csv"
-inf=open(infile,"r")
+inf=open(infile,"r",encoding="latin-1")
 for l in inf:
 	k=l.strip().split()
 	C1.append(k[0])
