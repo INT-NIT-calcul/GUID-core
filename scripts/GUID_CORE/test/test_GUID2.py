@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generate_GUID import generate_GUID2
-import pytest
+
 import unittest
 
 GUID = generate_GUID2('Jean-Michel', "Frégnac", '1949-03-22', 'M')
