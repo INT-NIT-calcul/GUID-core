@@ -12,7 +12,7 @@ def generate_GUID2(nom, prenom, age, sexe):
     if '-' in age:
         if re.match(r"^[0-9]{2}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,r'%d-%m-%Y').strftime(r'%d-%m-%Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str, r'%d-%m-%Y').strftime(r'%d-%m-%Y')
             key = nom + prenom + date_time_obj + sexe
 
             keygood = text_to_id(key)
