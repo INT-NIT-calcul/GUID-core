@@ -1,25 +1,18 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import sys
 from strip_accents import text_to_id
 import hashlib
 import re
 import datetime
 
 
-def generate_GUID2(
-    nom,
-    prenom,
-    age,
-    sexe,
-    ):
+def generate_GUID2(nom,prenom,age,sexe):
 
     if '-' in age:
         if re.match("^[0-9]{2}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%d-%m-%Y').strftime('%d-%m-%Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%d-%m-%Y').strftime(r'%d-%m-%Y')
             key = nom + prenom + date_time_obj + sexe
 
             keygood = text_to_id(key)
@@ -31,7 +24,7 @@ def generate_GUID2(
         if re.match("^[0-9]{4}\D", age):
             date_time_str = str(age)
             date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%Y-%m-%d').strftime('%d-%m-%Y')
+            r'%Y-%m-%d').strftime(r'%d-%m-%Y')
             key = nom + prenom + date_time_obj + sexe
             keygood = text_to_id(key)
             GUID = hashlib.sha256(keygood.encode('utf-8')).hexdigest()
@@ -40,8 +33,7 @@ def generate_GUID2(
     if '/' in age:
         if re.match("^[0-9]{2}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%d/%m/%Y').strftime('%d/%m/%Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%d/%m/%Y').strftime(r'%d/%m/%Y')
 
             key = nom + prenom + date_time_obj + sexe
 
@@ -52,8 +44,7 @@ def generate_GUID2(
 
         if re.match("^[0-9]{4}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%Y/%m/%d').strftime('%d/%m/%Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%Y/%m/%d').strftime(r'%d/%m/%Y')
 
             key = nom + prenom + date_time_obj + sexe
 
@@ -65,8 +56,7 @@ def generate_GUID2(
     if r"\\" in age:
         if re.match("^[0-9]{2}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%d\%m\%d').strftime('%d\%m\%Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%d\%m\%d').strftime(r'%d\%m\%Y')
 
             key = nom + prenom + date_time_obj + sexe
 
@@ -77,8 +67,7 @@ def generate_GUID2(
 
         if re.match("^[0-9]{4}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%Y\%m\%d').strftime('%d\%m\%Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%Y\%m\%d').strftime(r'%d\%m\%Y')
 
             key = nom + prenom + date_time_obj + sexe
 
@@ -90,8 +79,7 @@ def generate_GUID2(
     if ' ' in age:
         if re.match("^[0-9]{2}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%d %m %Y').strftime('%d %m %Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%d %m %Y').strftime(r'%d %m %Y')
 
             key = nom + prenom + date_time_obj + sexe
             keygood = text_to_id(key)
@@ -101,8 +89,7 @@ def generate_GUID2(
 
         if re.match("^[0-9]{4}\D", age):
             date_time_str = str(age)
-            date_time_obj = datetime.datetime.strptime(date_time_str,
-                    '%Y %m %d').strftime('%d %m %Y')
+            date_time_obj = datetime.datetime.strptime(date_time_str,r'%Y %m %d').strftime(r'%d %m %Y')
 
             key = nom + prenom + date_time_obj + sexe
             keygood = text_to_id(key)
