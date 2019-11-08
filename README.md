@@ -16,7 +16,7 @@ pip install generateGUID
 ```python
 import generate_GUID
 
-generate_GUID.generate_GUID(string) # returns retrun guid
+generate_GUID.generate_GUID(string) # returns guid
 
 
 
@@ -25,7 +25,7 @@ lastname=string
 dateOfBirth=string 
 gender=string
 
-generate_GUID.generate_GUID2(firstname,lastname,dateOfBirth,gender) # returns retrun guid
+generate_GUID.generate_GUID2(firstname,lastname,dateOfBirth,gender) # returns guid
 
 ```
 
