@@ -1,7 +1,5 @@
 # GUID-core
-
-
-Foobar is a Python library for dealing with word pluralization.
+Tool to generate GUID using sha256
 
 ## Installation
 
