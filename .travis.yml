@@ -30,11 +30,12 @@ script:
         - cd scripts/GUID_CORE
         - python3 -m pytest test/ || python -m pytest test/
         - flake8 --max-complexity 12 .
+        - rm *.pyc
 
 notifications:
   email:
     recipients:
-      - jeremygarcia937@gmail.com # a ajouter davic et dipankar
+      - jeremygarcia937@gmail.com # a ajouter david et dipankar
     on_success: never # default: change
     on_failure: never # default: always
 
