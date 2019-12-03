@@ -8,7 +8,7 @@ setuptools.setup(
      author_email="jeremy.garcia@univ-amu.fr",
      description="",
      long_description=long_description,
-   long_description_content_type="text/markdown",
+     long_description_content_type="text/markdown",
      url="https://github.com/Slowblitz/GUID-core",
      packages=setuptools.find_packages(),
      classifiers=[
