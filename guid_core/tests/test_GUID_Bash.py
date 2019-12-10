@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from generate_GUID import generate_GUID
+from guid_core.generate_GUID import generate_GUID
 import unittest
 
 GUID = generate_GUID("Jean-Michel"+"Frégnac"+"22/03/1949"+"M")
