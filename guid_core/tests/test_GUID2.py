@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from generate_GUID import generate_GUID2
+from guid_core.generate_GUID import generate_GUID2
 
 import unittest
 
