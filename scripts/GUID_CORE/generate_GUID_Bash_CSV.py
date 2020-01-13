@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-from generate_GUID import generate_GUID
+from guid_core import generate_GUID
 import pandas as pd
 
 if len(sys.argv) > 1:
