@@ -2,8 +2,8 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     name='generateGUID',
-     version='1.2',
+     name='guid_core',
+     version='1.0',
      author="jeremy garcia",
      author_email="jeremy.garcia@univ-amu.fr",
      description="",
